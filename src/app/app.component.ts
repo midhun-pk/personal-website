@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'midhun';
+  animationCompleted = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.animationCompleted = true;
+    }, 3000);
+  }
 }
