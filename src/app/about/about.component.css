@@ -1,0 +1,103 @@
+#about-flex-container {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#about-content-container {
+    width: 60%;
+    max-width: 480px;
+    display: block;
+}
+
+#about-content-container p {
+    display: block;
+    text-align: justify;
+    font-size: 18px;
+}
+
+#about-pic-container {
+    position: relative;
+    width: 40%;
+    max-width: 300px;
+    margin: 0 60px 0 60px;
+    display: block;
+}
+
+#about-avatar-container {
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    display: block;
+}
+
+#about-avatar {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+#about-avatar-shadow {
+    top: 30px;
+    left: 30px;
+    z-index: -1;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 2px solid #86c232;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+#about-avatar img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+}
+
+#about-avatar:hover {
+    top: 8px;
+    left: 8px;
+}
+
+#about-avatar:hover + #about-avatar-shadow {
+    top: 22px;
+    left: 22px;
+}
+
+#about-skills-container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(140px, 200px) minmax(140px, 200px);
+    overflow: hidden;
+    margin-top: 20px;
+    list-style-type: none;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+
+}
+
+.about-skill {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.about-skill::before {
+    content: "*";
+    color: #86c232;
+    margin: 0 5px 0 5px;
+}

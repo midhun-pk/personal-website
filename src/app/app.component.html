@@ -2,5 +2,11 @@
 <app-loader *ngIf="!animationCompleted"></app-loader>
 <div *ngIf="animationCompleted">
     <app-header></app-header>
-    <app-home></app-home>
+    <div class="main">
+        <app-home></app-home>
+        <app-about></app-about>
+        <app-experience></app-experience>
+        <app-work></app-work>
+        <app-contact></app-contact>
+    </div>
 </div>

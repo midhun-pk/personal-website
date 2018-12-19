@@ -31,15 +31,11 @@ nav button.navbar-toggler {
     color: #86c232;
 }
 
-nav button:focus {
-    outline: none;
-}
-
 nav li {
     position: relative;
     top: -100px;
     opacity: 0;
-    animation: slide-down .2s ease-in;
+    animation: slide-down .2s ease-in, fade-in .2s ease-in;
     animation-fill-mode: forwards;
 }
 
