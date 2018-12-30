@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand ml-5" title="logo">
     <svg id="header-logo" height="50" width="80">
       <polygon class="logo-hexagon" points="22 1 2 13 2 37 22 49 42 37 42 13"></polygon>
@@ -25,4 +25,48 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
+<header class="header-container" (click)="onMenuClick($event)">
+  <nav>
+    <div>
+      <div id="header-logo">
+        <a (click)="scrollTo('home')" title="logo" logo>
+          <svg height="50" width="80" logo>
+            <polygon class="logo-hexagon" points="22 1 2 13 2 37 22 49 42 37 42 13" logo></polygon>
+            <path class="logo-letter-m" d="M 15 32 L 15 18 L 22 25 L 29 18 L 29 32" logo></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div id="header-hamburger" (click)="toggleSidebar()" #hamburger>
+        <div id="hamburger-box">
+          <div [ngClass]="{'close-inner' : sidebarOpen , 'hamburger-inner' : !sidebarOpen}"></div>
+        </div>
+      </div>
+    </div>
+    <div id="header-nav-links">
+      <ol id="header-nav-list">
+        <div>
+          <li class="nav-list-item" *ngFor="let item of navList" (click)="scrollTo(item)">
+            <a class="nav-link">{{ item }}</a>
+          </li>
+        </div>
+      </ol>
+      <div>
+        <div><a href="#" target="_blank" rel="noopener noreferrer" class="button-link">Resume</a></div>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-container" [ngClass]="{open: sidebarOpen}">
+    <div id="sidebar">
+      <div id="sidebar-nav-links">
+        <ol id="sidebar-nav-list">
+          <li class="sidebar-nav-list-item" *ngFor="let item of navList" (click)="scrollTo(item)">
+            <a sidebarlink class="sidebar-nav-link">{{ item }}</a></li>
+        </ol>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="button-link">Resume</a>
+      </div>
+    </div>
+  </div>
+</header>

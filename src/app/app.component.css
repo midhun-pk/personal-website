@@ -1,22 +1,120 @@
-app-home {
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto", "Lucida Console", Monaco, monospace;
-}
-
 .main {
     padding: 0px 150px;
+    counter-reset: section 0;
 }
 
+.social-container {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+}
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.social-list::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    background-color: var(--color-one);
+    margin: 20px 0 0 0;
+}
+
+.social-link {
+    padding: 10px;
+}
+
+a {
+    display: inline-block;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social-link:hover, .email-link:hover {
+    color: var(--color-two);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    fill: currentcolor;
+    vertical-align: middle;
+}
+
+.email-container {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    right: 40px;
+    color: var(--color-one);
+}
+
+.email-container div {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.email-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.email-link {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.email-link-wrapper::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    background-color: var(--color-one);
+    margin: 0px auto;
+}
 
 @media only screen and (max-width: 62.5em) {
     .main {
       padding: 0px 100px;
     }
 
+    .social-container {
+        left: 25px;
+    }
+
+    .email-container {
+        right: 25px;
+    }
 }
 
 @media only screen and (max-width: 48em) {
     .main {
       padding: 0px 50px;
+    }
+
+    .social-container {
+        display: none;
+    }
+
+    .email-container {
+        display: none;
     }
 }
 

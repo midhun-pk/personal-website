@@ -4,7 +4,6 @@ import { Directive, HostListener, HostBinding, ElementRef } from '@angular/core'
     selector: '[appSlideUp]'
 })
 export class SlideUpDirective {
-    @HostBinding('class.slide-up') elementSlideUp = false;
     @HostBinding('class.fade-in') elementFadeIn = false;
 
     constructor(private elementRef: ElementRef) { }
@@ -14,7 +13,6 @@ export class SlideUpDirective {
         const viewPortHeight = (<Window>window).innerHeight;
 
         if (elementRectangle.top + 100 < viewPortHeight) {
-            this.elementSlideUp = true;
             this.elementFadeIn = true;
         }
     }
