@@ -1,0 +1,17 @@
+section {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0px auto;
+    padding: 150px 0;
+}
+
+@media only screen and (max-width: 48em) {
+    section {
+        padding: 100px 0px;
+    }
+}

@@ -1,3 +1,24 @@
 <section id="Experience">
   <div class="section-header" appSlideUp><span>Where I've worked</span></div>
+  <div class="jobs-container">
+    <div role="tablist" class="jobs-tabs">
+      <button role="tab" [attr.id]="'tab' + i" [attr.aria-selected]="isActive(i)" [attr.aria-controls]="'panel' + i"
+        class="jobs-tab" [attr.tabindex]="isActive(i)? 0: -1" *ngFor="let job of jobs; let i = index" (click)="setActiveTab(i)">
+        <span>{{ job.company }}</span>
+      </button>
+      <span class="highlight-tab" [ngStyle]="{'transform': getHighlightTransform()}"></span>
+    </div>
+    <div class="jobs-content-container">
+      <div role="tabpanel" [attr.id]="'panel' + i" [attr.aria-labelledby]="'tab' + i" tabindex="0" class="jobs-tab-content"
+        *ngFor="let job of jobs; let i = index" [attr.aria-hidden]="!isActive(i)" [ngClass]="{'show-content': isActive(i), 'hide-content': !isActive(i)}">
+        <div class="job-title">{{ job.role }} <span>@ {{ job.company }}</span></div>
+        <div class="job-duration">{{ job.duration }}</div>
+        <div>
+          <ul>
+            <li *ngFor="let description of job.descriptions">{{ description }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

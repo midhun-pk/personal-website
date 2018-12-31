@@ -45,3 +45,22 @@ section {
 #say-hello {
     opacity: 0;
 }
+
+@media only screen  and (max-width: 62.5em) {
+
+    #contact-content-header {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 48em) {
+
+    section {
+        padding: 100px 0px;
+    }
+
+    #contact-content-header {
+        font-size: 40px;
+    }
+
+}

@@ -12,8 +12,11 @@
 :root {
     --background-color-one: #020c1b;
     --color-one: #8892b0;
-    --color-two: #14a76c;
+    --color-two: #32e79e; /*14a76c*/
     --color-three: #e6fff5;
+    --color-four: #2d3952;
+    --color-five: #172a45;
+    --color-six: #c2c7d6;
     --background-color-two: #04152f;
 }
 
@@ -105,14 +108,6 @@ ul, ol {
     list-style: none;
 }
 
-button {
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-    background-color: transparent;
-    border: 1px solid var(--color-two) !important;
-    color: var(--color-two) !important;
-    font-size: 13px;
-}
-
 .button-link {
     background-color: transparent;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
@@ -131,18 +126,6 @@ button {
 
 .button-link:hover {
     background-color: rgb(255, 255, 255, 0.1);
-}
-
-section {
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-    -webkit-box-align: center;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    margin: 0px auto;
-    padding: 150px 0;
 }
 
 .section-header {
@@ -174,7 +157,7 @@ section {
     display: block;
     height: 1px;
     width: 300px;
-    background-color: rgb(45, 57, 82);
+    background-color: var(--color-four);
     margin-left: 20px;
 }
 
@@ -189,6 +172,10 @@ section {
 
 @media only screen and (max-width: 48em) {
 
+    body {
+        font-size: 16px;
+    }
+
     .section-header {
         font-size: 22px;
     }
@@ -199,13 +186,6 @@ section {
 
     .section-header::after {
         width: 100%;
-    }
-}
-
-@media only screen and (max-width: 30em) {
-    
-    body {
-        font-size: 16px !important;
     }
 }
 
