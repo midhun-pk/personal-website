@@ -1,16 +1,5 @@
-section {
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-    -webkit-box-align: center;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    margin: 0px auto;
-    padding: 150px 0;
-}
-
 #about-flex-container {
+    position: relative;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -76,6 +65,7 @@ section {
     object-position: center center;
     opacity: 1;
     mix-blend-mode: multiply;
+    filter: grayscale(100%);
 }
 
 #about-avatar div {
@@ -91,6 +81,7 @@ section {
 
 #about-avatar:hover img {
     mix-blend-mode: initial;
+    filter: grayscale(0%);
 }
 
 #about-avatar:hover + #about-avatar-shadow {
@@ -122,10 +113,6 @@ section {
 
 
 @media only screen and (max-width: 48em) {
-
-    section {
-        padding: 100px 0px;
-    }
 
     #about-flex-container {
         display: block;

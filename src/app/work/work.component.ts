@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-work',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work.component.css']
 })
 export class WorkComponent implements OnInit {
+  projects = [];
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.projects = this.data.getProjects();
   }
 
 }

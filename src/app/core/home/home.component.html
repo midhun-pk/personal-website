@@ -1,17 +1,11 @@
-<section id="home">
+<section id="home" class="section-default">
   <div id="name-is"><span>Hi, my name is</span></div>
-  <div id="name"><span>Midhun.</span></div>
-  <div id="what-i-do"><span>I build things for the web.</span></div>
+  <div id="name"><span>{{ name }}.</span></div>
+  <div id="tag-line"><span>{{ tagLine }}</span></div>
   <div id="summary">
-    <p>
-      I'm a software engineer based in Banglore, India specializing in full-stack web application development
-      and data analysis using deep learning models. Currently working at <a class="text-link" href="#">Infosys</a>
-      as
-      a Senior Software
-      Engineer.
-    </p>
+    <p [innerHTML]="summary"></p>
   </div>
   <div id="get-in-touch">
-    <a href="#" target="_blank" rel="noopener noreferrer" class="button-link">Get In Touch</a>
+    <a [attr.href]="'mailto:' + email" target="_blank" rel="noopener noreferrer" class="button-link">Get In Touch</a>
   </div>
 </section>

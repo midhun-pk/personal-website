@@ -1,15 +1,3 @@
-section {
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-    -webkit-box-align: center;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    margin: 0px auto;
-    padding: 150px 0;
-}
-
 section > div {
     opacity: 0;
     position: relative;
@@ -27,14 +15,14 @@ section > div {
 
 #name {
     color: var(--color-three);
-    font-size: 80px;
+    font-size: 70px;
     line-height: 1.1;
     font-weight: 600;
     animation-delay: .8s;
 }
 
-#what-i-do {
-    font-size: 80px;
+#tag-line {
+    font-size: 70px;
     line-height: 1.1;
     font-weight: 600;
     animation-delay: .9s;
@@ -62,17 +50,13 @@ section > div {
         font-size: 70px;
     }
 
-    #what-i-do {
-        font-size: 70px;
+    #tag-line {
+        font-size: 60px;
     }
 
 }
 
 @media only screen and (max-width: 48em) {
-
-    section {
-        padding: 100px 0px;
-    }
 
     #name-is {
         font-size: 13px;
@@ -83,7 +67,7 @@ section > div {
         font-size: 50px;
     }
 
-    #what-i-do {
+    #tag-line {
         font-size: 50px;
     }
 
@@ -104,7 +88,7 @@ section > div {
         font-size: 50px;
     }
 
-    #what-i-do {
+    #tag-line {
         font-size: 50px;
     }
 

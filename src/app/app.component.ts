@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './shared/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'midhun';
+  email: string;
+  linkedinURL: string;
+  githubURL: string;
   animationCompleted = false;
 
-  constructor() {
+  constructor(private data: DataService) {
     setTimeout(() => {
       this.animationCompleted = true;
     }, 3000);
+    this.email = this.data.getEmail();
+    this.linkedinURL = this.data.getLinkedinURL();
+    this.githubURL = this.data.getGithubURL();
   }
+
+
 }

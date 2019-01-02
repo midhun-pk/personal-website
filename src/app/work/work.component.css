@@ -1,17 +1,195 @@
-section {
-    max-width: 1000px;
+.projects {
+    position: relative;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 10px 10px;
+    opacity: 0;
+    position: relative;
+}
+
+.content-container {
+    position: relative;
+    z-index: 2;
+    grid-row: 1 / -1;
+    grid-column: 1 / 7;
+}
+
+.project:nth-of-type(2n+1) .content-container{
+    text-align: right;
+    grid-column: 7 / -1;
+}
+
+.content-container .name {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-six);
+    margin: 0px 0px 20px;
+}
+
+.content-container .description {
+    background-color: var(--color-seven);
+    font-size: 16px;
+    line-height: 1.3;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0 0 20px var(--box-shadow-color);
+}
+
+.content-container .tech-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px 0px 10px;
+}
+
+.project:nth-of-type(2n+1) .tech-list {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.content-container .tech-list li {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 13px;
+    margin-right: 20px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+}
+
+.project:nth-of-type(2n+1) .tech-list li {
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+.content-container .links {
+    display: flex;
     -webkit-box-align: center;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    margin: 0px auto;
-    padding: 150px 0;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+.project:nth-of-type(2n+1) .links {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin-left: 0px;
+    margin-right: -10px;    
+}
+
+.links a {
+    padding: 10px;
+    width: 42px;
+    height: 42px;
+    color: var(--color-one);
+}
+
+.links a:hover {
+    color: var(--color-two);
+}
+
+.image-container {
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+    grid-row: 1 / -1;
+    grid-column: 6 / -1;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    background-color: var(--color-two);
+    box-shadow: 0 0 20px var(--box-shadow-color);
+}
+
+.project:nth-of-type(2n+1) .image-container{
+    grid-column: 1 / 8;
+}
+
+.image-container div {
+    width:100%; 
+    padding-bottom:62.5%;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.9;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%);
+}
+
+.image-container:hover img {
+    mix-blend-mode: initial;
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 @media only screen and (max-width: 48em) {
-    section {
-        padding: 100px 0px;
+    .image-container {
+        height: 100%;   
+    }
+
+    .project:nth-last-of-type(2n+1) .image-container {
+        height: 100%;
+    }
+    
+
+}
+
+@media only screen and (max-width: 37.5em) {
+    .project {
+        margin-bottom: 70px;
+    }
+
+    .project:nth-last-of-type(2n+1) .content-container {
+        padding: 40px 40px 30px;
+        grid-column: 1 / -1;
+    }
+
+    .content-container {
+        padding: 40px 40px 30px;
+        grid-column: 1 / -1;
+    }
+
+    .image-container {
+        opacity: 0.25;
+        grid-column: 1 / -1;
+        filter: grayscale(100%) contrast(1) brightness(100%);
+    }
+
+    .project:nth-last-of-type(2n+1) .image-container {
+        opacity: 0.25;
+        grid-column: 1 / -1;
+    }
+
+    .content-container .name {
+        font-size: 20px;
+    }
+
+    .content-container .description {
+        background-color: transparent;
+        padding: 20px 0px;
+        box-shadow: none;
+    }
+
+    .content-container .tech-list li {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 30em) {
+    .project:nth-last-of-type(2n+1) .content-container {
+        padding: 30px 25px 20px;
+    }
+
+    .content-container {
+        padding: 30px 25px 20px;
     }
 }

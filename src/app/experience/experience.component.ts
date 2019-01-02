@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-experience',
@@ -7,31 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
   activeTabIndex = 0;
+  jobs = [];
 
-  jobs = [{
-    company: 'Infosys',
-    role: 'Engineer',
-    duration: 'Nov 2015 - Dec 2018',
-    descriptions: [
-      'Write modern, performant, maintainable code for a diverse array of client and internal projects',
-      'Work with a variety of different languages, platforms, frameworks, and content management systems \
-        such as JavaScript, TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify',
-      'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis'
-    ]
-  }, {
-    company: 'TCS',
-    role: 'Intern',
-    duration: 'July 2014 - Oct 2014',
-    descriptions: [
-      'Work with a variety of different languages, platforms, frameworks, and content management systems \
-        such as JavaScript, TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify',
-      'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis'
-    ]
-  }];
-
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.jobs = this.data.getJobs();
   }
 
   setActiveTab(index: number): void {

@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-about',
@@ -6,25 +7,16 @@ import { Component, OnInit, ElementRef, HostListener, ViewChild } from '@angular
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  skills = ['Python',
-    'Javascript',
-    'Typescript',
-    'Mongodb',
-    'Elasticsearch',
-    'Angular',
-    'React',
-    'HTML & CSS',
-    'D3.js',
-    'Apache Spark',
-    'Node.js',
-    'Flask',
-    'PyTorch',
-    'Tensorflow'
-  ];
+  skills: string[];
+  image: string;
+  stories: string[];
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.skills = this.data.getSkills();
+    this.image = this.data.getImage();
+    this.stories = this.data.getStory();
   }
 
 }

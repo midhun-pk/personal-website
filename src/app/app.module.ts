@@ -10,6 +10,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { WorkComponent } from './work/work.component';
 import { ContactComponent } from './contact/contact.component';
 import { SlideUpDirective } from './shared/slide-up.directive';
+import { GithubComponent } from './shared/github-component';
+import { LinkedInComponent } from './shared/linkedin-component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { SlideUpDirective } from './shared/slide-up.directive';
     ExperienceComponent,
     WorkComponent,
     ContactComponent,
+    GithubComponent,
+    LinkedInComponent,
     SlideUpDirective
   ],
   imports: [

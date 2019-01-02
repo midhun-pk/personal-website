@@ -1,4 +1,23 @@
-<section id="Work">
-  <div class="section-header" appSlideUp><span>Some Things I've Built</span></div>
-
+<section id="Work" class="section-default">
+  <div class="section-header" appSlideUp><span>Some Things I've Made</span></div>
+  <div class="projects">
+    <div class="project" *ngFor="let project of projects" appSlideUp>
+      <div class="content-container">
+        <div class="name">{{ project.name }}</div>
+        <div class="description">{{ project.description }}</div>
+        <ul class="tech-list">
+          <li *ngFor="let technology of project.technologies">{{ technology }}</li>
+        </ul>
+        <div class="links">
+          <a [attr.href]="link.url" target="_blank" rel="noopener noreferrer" *ngFor="let link of project.links">
+            <div class="icon-github" *ngIf="link.icon === 'github'"></div>
+          </a>
+        </div>
+      </div>
+      <div class="image-container">
+        <div></div>
+        <img [src]="project.image" alt="">
+      </div>
+    </div>
+  </div>
 </section>

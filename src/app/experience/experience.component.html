@@ -1,6 +1,6 @@
 <section id="Experience">
   <div class="section-header" appSlideUp><span>Where I've worked</span></div>
-  <div class="jobs-container">
+  <div class="jobs-container" appSlideUp>
     <div role="tablist" class="jobs-tabs">
       <button role="tab" [attr.id]="'tab' + i" [attr.aria-selected]="isActive(i)" [attr.aria-controls]="'panel' + i"
         class="jobs-tab" [attr.tabindex]="isActive(i)? 0: -1" *ngFor="let job of jobs; let i = index" (click)="setActiveTab(i)">
