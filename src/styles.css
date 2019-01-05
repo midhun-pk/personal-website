@@ -182,7 +182,7 @@ img {
 }
 
 .fade-in {
-    animation: fade-in .3s ease-in, slide-up .3s ease;
+    animation: fade-in .3s ease-in, slide-up .3s ease-in;
     animation-fill-mode: forwards;
 }
 

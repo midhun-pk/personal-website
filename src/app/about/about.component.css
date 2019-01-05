@@ -15,6 +15,16 @@
     display: block;
 }
 
+#about-content-container p:nth-child(1) {
+    margin-top: 0;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    color: var(--color-six);
+}
+
+#about-content-container p:nth-child(1) span:nth-child(2) {
+    color: var(--color-two);
+}
+
 #about-pic-container {
     position: relative;
     width: 40%;
@@ -106,7 +116,7 @@
 }
 
 .about-skill::before {
-    content: "*";
+    content: "▹";
     color: var(--color-two);
     margin: 0 10px 0 5px;
 }

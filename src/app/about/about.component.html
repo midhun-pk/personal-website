@@ -2,6 +2,7 @@
   <div class="section-header" appSlideUp><span>About Me</span></div>
   <div id="about-flex-container" appSlideUp>
     <div id="about-content-container">
+      <p><span>Logically minded</span><span> // Creative at heart</span></p>
       <p [innerHTML]="story" *ngFor="let story of stories"></p>
       <ul id="about-skills-container">
         <li *ngFor="let skill of skills" class="about-skill">{{ skill }}</li>

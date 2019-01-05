@@ -78,6 +78,10 @@ section {
     transition-delay: 0s;
 }
 
+.jobs-tab-content:focus {
+    outline: none;
+}
+
 .show-content {
     opacity: 1;
     z-index: 2;
@@ -126,6 +130,9 @@ section {
     position: relative;
     padding-left: 30px;
     margin-bottom: 5px;
+    opacity: 0;
+    animation: fade-in .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-fill-mode: forwards;
 }
 
 .jobs-tab-content ul li::before {
@@ -135,6 +142,25 @@ section {
     color: var(--color-two);
     line-height: 22px;
     font-size: 20px;
+}
+
+.more-description {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 30px;
+    color: var(--color-two);
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.more-description:focus {
+    outline: none;
+}
+
+.more-description span {
+    height: 10px;
 }
 
 @media only screen and (max-width: 48em) {

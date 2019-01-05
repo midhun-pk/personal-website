@@ -9,6 +9,8 @@ import { DataService } from '../shared/data.service';
 export class ExperienceComponent implements OnInit {
   activeTabIndex = 0;
   jobs = [];
+  maxDescriptions = 4;
+  activeMax = 4;
 
   constructor(private data: DataService) { }
 
@@ -18,6 +20,7 @@ export class ExperienceComponent implements OnInit {
 
   setActiveTab(index: number): void {
     this.activeTabIndex = index;
+    this.activeMax = this.maxDescriptions;
   }
 
   isActive(index: number): boolean {

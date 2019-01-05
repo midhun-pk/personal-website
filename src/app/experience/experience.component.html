@@ -10,13 +10,18 @@
     </div>
     <div class="jobs-content-container">
       <div role="tabpanel" [attr.id]="'panel' + i" [attr.aria-labelledby]="'tab' + i" tabindex="0" class="jobs-tab-content"
-        *ngFor="let job of jobs; let i = index" [attr.aria-hidden]="!isActive(i)" [ngClass]="{'show-content': isActive(i), 'hide-content': !isActive(i)}">
+        *ngFor="let job of jobs; let i = index;" [attr.aria-hidden]="!isActive(i)" [ngClass]="{'show-content': isActive(i), 'hide-content': !isActive(i)}">
         <div class="job-title">{{ job.role }} <span>@ {{ job.company }}</span></div>
-        <div class="job-duration">{{ job.duration }}</div>
+        <div class="job-duration">{{ job.startdate }} - {{ job.enddate }}</div>
         <div>
           <ul>
-            <li *ngFor="let description of job.descriptions">{{ description }}</li>
+            <li *ngFor="let description of job.descriptions | slice:0:activeMax; let j = index">{{
+              description }}</li>
           </ul>
+        </div>
+        <div class="more-description" *ngIf="job.descriptions.length > maxDescriptions">
+          <div class="button-link" (click)="activeMax = job.descriptions.length" *ngIf="activeMax !== job.descriptions.length">MORE</div>
+          <div class="button-link" (click)="activeMax = maxDescriptions" *ngIf="activeMax === job.descriptions.length">LESS</div>
         </div>
       </div>
     </div>
