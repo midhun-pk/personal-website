@@ -95,7 +95,7 @@ export class DataService {
     },
     contact: {
       available: 'So are you looking for a professional, communicative & punctual software engineer \
-              with extensive full-stack web development skills for your next project? <br\>\
+              with extensive full-stack web development skills for <br\> your next project? <br\>\
               If you have an application you are interested in developing with web technology, \
               think you need my help \
               with something or just fancy saying hey, then get in touch.',

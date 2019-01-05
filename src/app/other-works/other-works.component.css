@@ -1,0 +1,103 @@
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    grid-gap: 15px;
+}
+
+.project {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    background-color: var(--color-seven);
+    padding: 25px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    animation-fill-mode: forwards;
+}
+
+.project-header {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.project > div {
+    width: 100%;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px var(--box-shadow-color);
+}
+
+.project-folder {
+    color: var(--color-two);
+    width: 40px;
+    height: 40px;
+}
+
+.project-link {
+    margin-right: -10px;
+}
+
+.project-link a {
+    padding: 10px;
+    width: 42px;
+    height: 42px;
+    color: var(--color-one);
+}
+
+.project-name {
+    font-size: 18px;
+    color: var(--color-six);
+    margin: 0px 0px 10px;
+}
+
+.project-description {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.project-description p {
+    margin: 0px 0px 10px;
+}
+
+.tech-list {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tech-list li {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+    line-height: 2;
+    margin-right: 15px;
+}
+
+
+@media only screen and (max-width: 65em) {
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 42em) {
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

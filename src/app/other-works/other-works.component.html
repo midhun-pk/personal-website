@@ -1,3 +1,28 @@
-<p>
-  other-works works!
-</p>
+<section id="Work" class="section-default">
+  <div class="sub-section-header" appSlideUp><span>Other Projects</span></div>
+  <div class="projects-grid">
+    <div class="projects">
+      <div class="project-container" *ngFor="let project of projects; let i = index">
+        <div class="project" appSlideUp>
+          <div>
+            <div class="project-header">
+              <div class="project-folder icon-folder"></div>
+              <div class="project-link">
+                <a href="#" class="icon-github"></a>
+              </div>
+            </div>
+            <div class="project-name">{{ project.name }}</div>
+            <div class="project-description">
+              <p>{{ project.description }}</p>
+            </div>
+          </div>
+          <div>
+            <ul class="tech-list">
+              <li *ngFor="let technology of project.technologies">{{ technology }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -9,9 +9,11 @@ import { AboutComponent } from './about/about.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { WorkComponent } from './work/work.component';
 import { ContactComponent } from './contact/contact.component';
+import { OtherWorksComponent } from './other-works/other-works.component';
 import { SlideUpDirective } from './shared/slide-up.directive';
 import { GithubComponent } from './shared/github-component';
 import { LinkedInComponent } from './shared/linkedin-component';
+import { FolderComponent } from './shared/folder-component';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,10 @@ import { LinkedInComponent } from './shared/linkedin-component';
     ExperienceComponent,
     WorkComponent,
     ContactComponent,
+    OtherWorksComponent,
     GithubComponent,
     LinkedInComponent,
+    FolderComponent,
     SlideUpDirective
   ],
   imports: [
