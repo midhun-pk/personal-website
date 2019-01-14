@@ -12,7 +12,7 @@ export class WorkComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.projects = this.data.getProjects();
+    this.projects = this.data.getFeaturedProjects();
   }
 
 }

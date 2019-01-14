@@ -10,8 +10,9 @@ export class DataService {
     email: 'pkr.midhun@gmail.com',
     tagLine: 'Innovation is my passion.',
     image: 'assets/images/me.jpg',
-    summary: 'I\'m a software engineer based in Kerala, \
-              India focused on crafting exceptional, high-quality applications and has a deep passion \
+    summary: 'I\'m a software engineer based in \
+              India, currently residing in United Arab Emirates, focused on crafting exceptional, high-quality \
+              applications and have a deep passion \
               for transforming data into information using algorithms.',
     stories: [
       'I\'m a software engineer who enjoys building things to run across devices using the latest technologies available.\
@@ -60,34 +61,34 @@ export class DataService {
         'Monitored network performance and resolved problems that occurred during live assessment'
       ]
     }],
+    featuredProjects: [{
+      name: 'Sentence Embeddings',
+      description: 'An unsupervised algorithm for textual similarity tasks. Uses word embeddings to represent sentence \
+        by the weighted average of word vectors and then modified by singular valued decomposition.',
+      technologies: ['Python', 'Tensorboard', 'NLP'],
+      links: [{
+        icon: 'github',
+        url: 'https://github.com/midhun-pk/semantic-similarity'
+      }],
+      image: 'assets/images/word-vector.jpg',
+    }],
     projects: [{
-      name: 'Spotify Profile',
-      description: 'A web app for visualizing personalized Spotify data. View your top artists,\
-        top tracks, recently played tracks, and detailed audio information about each track. Create and save new \
-        playlists of recommended tracks based on your existing playlists and more.',
-      technologies: ['React', 'Express', 'Reach Router', 'Styled Components'],
-      links: [{
+      name: 'Coupled Pattern Learner',
+      description: 'A Semi-Supervised learning algorithm for information extraction.\
+        ',
+      technologies: ['Python', 'MongoDB', 'NLP'],
+      link: {
         icon: 'github',
-        url: '#'
-      }],
-      image: 'assets/images/demo.png',
+        url: 'https://github.com/midhun-pk/cpl'
+      }
     }, {
-      name: 'Halcyon Theme',
-      description: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. \
-      Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      technologies: ['VS Code', 'Sublime Text', 'Atom', 'iTerm2', 'Hyper'],
-      links: [{
+      name: 'Personal Website',
+      description: 'First iteration of my personal website built with Angular and hosted on Github Pages.',
+      technologies: ['Angular', 'CSS', 'Github Pages'],
+      link: {
         icon: 'github',
-        url: '#'
-      }],
-      image: 'assets/images/demo.png',
-    }, {
-      name: 'Blistabloc',
-      description: 'Custom wordpress theme built with Timber and WooCommerce for blistabloc, \
-      a start-up selling the only reactive shoe insert that prevents blisters from forming..',
-      technologies: ['Wordpress', 'Timber', 'SCSS', 'JS', 'PHP'],
-      links: [],
-      image: 'assets/images/demo.png',
+        url: 'https://github.com/midhun-pk/personal-website'
+      }
     }],
     social: {
       github: 'https://github.com/midhun-pk/',
@@ -158,5 +159,9 @@ export class DataService {
       return this.profile.contact.available;
     }
     return this.profile.contact.unavailable;
+  }
+
+  getFeaturedProjects(): any[] {
+    return this.profile.featuredProjects;
   }
 }

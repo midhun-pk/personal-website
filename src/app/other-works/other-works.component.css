@@ -57,6 +57,10 @@
     color: var(--color-one);
 }
 
+.project-link a:hover {
+    color: var(--color-two);
+}
+
 .project-name {
     font-size: 18px;
     color: var(--color-six);

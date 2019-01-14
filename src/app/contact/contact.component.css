@@ -31,6 +31,7 @@ section {
 }
 
 #contact-content-header {
+    position: relative;
     font-size: 60px;
     margin: 0px 0px 20px;
     color: var(--color-three);
@@ -38,11 +39,13 @@ section {
 }
 
 #contact-content {
+    position: relative;
     margin-bottom: 50px;
     opacity: 0;
 }
 
 #say-hello {
+    position: relative;
     opacity: 0;
 }
 

@@ -8,7 +8,7 @@
             <div class="project-header">
               <div class="project-folder icon-folder"></div>
               <div class="project-link">
-                <a href="#" class="icon-github"></a>
+                <a [attr.href]="project.link.url" target="_blank" rel="noopener noreferrer" class="icon-github"></a>
               </div>
             </div>
             <div class="project-name">{{ project.name }}</div>
