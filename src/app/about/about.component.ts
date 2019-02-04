@@ -10,10 +10,12 @@ export class AboutComponent implements OnInit {
   skills: string[];
   image: string;
   stories: string[];
+  name: string;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.name = this.data.getName();
     this.skills = this.data.getSkills();
     this.image = this.data.getImage();
     this.stories = this.data.getStory();
