@@ -1,4 +1,4 @@
-<section id="Work" class="section-default">
+<section class="section-default">
   <div class="sub-section-header" appSlideUp><span>Other Projects</span></div>
   <div class="projects-grid">
     <div class="projects">
@@ -8,7 +8,8 @@
             <div class="project-header">
               <div class="project-folder icon-folder"></div>
               <div class="project-link">
-                <a [attr.href]="project.link.url" target="_blank" rel="noopener noreferrer" class="icon-github"></a>
+                <a [attr.href]="project.link.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'project-' + i"
+                  class="icon-github"></a>
               </div>
             </div>
             <div class="project-name">{{ project.name }}</div>

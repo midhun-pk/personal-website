@@ -2,7 +2,7 @@
   <nav>
     <div>
       <div id="header-logo">
-        <a (click)="scrollTo('home')" title="logo" logo>
+        <a (click)="scrollTo('home')" title="logo" aria-label="logo" logo>
           <svg height="50" width="80" logo>
             <polygon class="logo-hexagon" points="22 1 2 13 2 37 22 49 42 37 42 13" logo></polygon>
             <path class="logo-letter-m" d="M 15 32 L 15 18 L 22 25 L 29 18 L 29 32" logo></path>
@@ -20,14 +20,14 @@
     <div id="header-nav-links">
       <ol id="header-nav-list">
         <div>
-          <li class="nav-list-item" *ngFor="let item of navList" (click)="scrollTo(item)">
-            <a class="nav-link">{{ item }}</a>
+          <li class="nav-list-item" *ngFor="let item of navList; let i = index;" (click)="scrollTo(item)">
+            <a class="nav-link" [attr.aria-label]="'nav-' + i">{{ item }}</a>
           </li>
         </div>
       </ol>
       <div>
         <div><a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="button-link"
-            download>Resume</a></div>
+            download aria-label="resume">Resume</a></div>
       </div>
     </div>
   </nav>
@@ -35,10 +35,11 @@
     <div id="sidebar">
       <div id="sidebar-nav-links">
         <ol id="sidebar-nav-list">
-          <li class="sidebar-nav-list-item" *ngFor="let item of navList" (click)="scrollTo(item)">
-            <a sidebarlink class="sidebar-nav-link">{{ item }}</a></li>
+          <li class="sidebar-nav-list-item" *ngFor="let item of navList; let i = index;" (click)="scrollTo(item)">
+            <a sidebarlink class="sidebar-nav-link" [attr.aria-label]="'nav-' + i">{{ item }}</a></li>
         </ol>
-        <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="button-link" download>Resume</a>
+        <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer" class="button-link" download
+          aria-label="sidebar-resume">Resume</a>
       </div>
     </div>
   </div>

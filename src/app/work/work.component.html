@@ -1,7 +1,7 @@
 <section id="Work" class="section-default">
   <div class="section-header" appSlideUp><span>Some Things I've Made</span></div>
   <div class="projects">
-    <div class="project" *ngFor="let project of projects" appSlideUp>
+    <div class="project" *ngFor="let project of projects; let i = index;" appSlideUp>
       <div class="content-container">
         <div class="name">{{ project.name }}</div>
         <div class="description">{{ project.description }}</div>
@@ -9,8 +9,8 @@
           <li *ngFor="let technology of project.technologies">{{ technology }}</li>
         </ul>
         <div class="links">
-          <a [attr.href]="link.url" target="_blank" rel="noopener noreferrer" *ngFor="let link of project.links">
-            <div class="icon-github" *ngIf="link.icon === 'github'"></div>
+          <a [attr.href]="link.url" target="_blank" rel="noopener noreferrer" *ngFor="let link of project.links; let j = index;">
+            <div class="icon-github" *ngIf="link.icon === 'github'" [attr.aria-label]="'featured-project-' + i + '-' + j"></div>
           </a>
         </div>
       </div>
