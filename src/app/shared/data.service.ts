@@ -71,6 +71,15 @@ export class DataService {
         url: 'https://github.com/midhun-pk/semantic-similarity'
       }],
       image: 'assets/images/word-vector.jpg',
+    },{
+      name: 'Authentication System',
+      description: 'A token based authentication strategy for securely transmitting information between client and server as a JSON object.',
+      technologies: ['Node.js', 'Angular', 'Express', 'MongoDB'],
+      links: [{
+        icon: 'github',
+        url: 'https://github.com/midhun-pk/authentication-system'
+      }],
+      image: 'assets/images/auth-system.gif',
     }],
     projects: [{
       name: 'Coupled Pattern Learner',
