@@ -11,7 +11,7 @@ export class DataService {
     tagLine: 'Innovation is my passion.',
     image: 'assets/images/me.jpg',
     summary: 'I\'m a software engineer based in \
-              India, currently residing in United Arab Emirates, focused on crafting exceptional, high-quality \
+              India, focused on crafting exceptional, high-quality \
               applications and have a deep passion \
               for transforming data into information using algorithms.',
     stories: [
@@ -36,7 +36,7 @@ export class DataService {
       descriptions: [
         'Write modern, performant, maintainable code for a diverse array of client and internal projects',
         'Work with a variety of different languages, platforms, and frameworks, and \
-        web servers such as JavaScript, Python, Angular, D3.js, Node.js, Flask, PyTorch, and Tensorflow',
+        web servers such as JavaScript, Python, Angular, D3.js, Node.js, Flask',
         'Communicate with multi-disciplinary teams of engineers, designers, clients on a daily basis',
         'Architected and developed defect resolution strategy recommendation system and saved 30% of  \
           time required for analyzing and resolving defects',
