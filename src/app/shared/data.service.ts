@@ -26,9 +26,20 @@ export class DataService {
               technologies that keep evolving in this ever-changing field!',
       'Here\'s a few things I\'m experienced with:'
     ],
-    skills: ['Python', 'Javascript', 'Typescript', 'Mongodb', 'Elasticsearch', 'Angular', 'React', 'HTML & CSS', 'D3.js',
+    skills: ['Python', 'JavaScript', 'TypeScript', 'Mongodb', 'Elasticsearch', 'Angular', 'React.js', 'HTML & CSS', 'D3.js',
       'Apache Spark', 'Node.js', 'Flask', 'PyTorch', 'Tensorflow'],
     jobs: [{
+      company: 'Brandmuscle',
+      role: 'Front End Engineer',
+      startdate: 'Apr 2019',
+      enddate: 'Present',
+      descriptions: [
+        'Responsible for developing customer facing, cross-browser compatible and \
+          secure web applications using Angular 7 and NgRx',
+        'Implemented secure token-based authentication using OpenID connect',
+        'Collaborated with engineers spread out over time zones to ensure end-toend quality'
+      ]
+    }, {
       company: 'Infosys',
       role: 'Senior Software Engineer',
       startdate: 'Nov 2015',
