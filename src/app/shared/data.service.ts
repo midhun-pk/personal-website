@@ -73,6 +73,15 @@ export class DataService {
       ]
     }],
     featuredProjects: [{
+      name: 'Path Finder',
+      description: 'A web application that visualizes different path finding algorithms and maze generation algorithms.',
+      technologies: ['Angular', 'HTML', 'CSS'],
+      links: [{
+        icon: 'github',
+        url: 'https://github.com/midhun-pk/path-finder'
+      }],
+      image: 'assets/images/path-finder.png'
+    }, {
       name: 'Sentence Embeddings',
       description: 'An unsupervised algorithm for textual similarity tasks. Uses word embeddings to represent sentence \
         by the weighted average of word vectors and then modified by singular valued decomposition.',
