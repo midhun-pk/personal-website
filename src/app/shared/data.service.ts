@@ -100,7 +100,7 @@ export class DataService {
         icon: 'github',
         url: 'https://github.com/midhun-pk/authentication-system'
       }],
-      image: 'assets/images/auth-system.gif'
+      image: 'assets/images/auth-system.png'
     }],
     projects: [{
       name: 'Coupled Pattern Learner',
