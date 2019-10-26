@@ -14,6 +14,7 @@ import { SlideUpDirective } from './shared/slide-up.directive';
 import { GithubComponent } from './shared/github-component';
 import { LinkedInComponent } from './shared/linkedin-component';
 import { FolderComponent } from './shared/folder-component';
+import { WebsiteComponent } from './shared/website-component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FolderComponent } from './shared/folder-component';
     GithubComponent,
     LinkedInComponent,
     FolderComponent,
-    SlideUpDirective
+    SlideUpDirective,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,

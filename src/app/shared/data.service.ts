@@ -77,6 +77,9 @@ export class DataService {
       description: 'A web application that visualizes different path finding algorithms and maze generation algorithms.',
       technologies: ['Angular', 'HTML', 'CSS'],
       links: [{
+        icon: 'website',
+        url: 'https://midhun-pk.github.io/path-finder/'
+      }, {
         icon: 'github',
         url: 'https://github.com/midhun-pk/path-finder'
       }],
