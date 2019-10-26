@@ -10,8 +10,8 @@
         </ul>
         <div class="links">
           <a [attr.href]="link.url" target="_blank" rel="noopener noreferrer" *ngFor="let link of project.links; let j = index;">
-            <div class="icon-website" *ngIf="link.icon === 'website'" [attr.aria-label]="'featured-project-website-' + i + '-' + j"></div>
-            <div class="icon-github" *ngIf="link.icon === 'github'" [attr.aria-label]="'featured-project-github-' + i + '-' + j"></div>
+            <div class="icon-website" title="Website" *ngIf="link.icon === 'website'" [attr.aria-label]="'featured-project-website-' + i + '-' + j"></div>
+            <div class="icon-github" title="Github" *ngIf="link.icon === 'github'" [attr.aria-label]="'featured-project-github-' + i + '-' + j"></div>
           </a>
         </div>
       </div>
